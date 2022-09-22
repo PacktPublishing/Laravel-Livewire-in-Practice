@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Livewire;
+
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Livewire\Component;
 use App\Models\Room;
@@ -25,7 +26,6 @@ class RoomSearch extends Component
             'rooms' => Room::where('title', 'like', '%'.$this->room_search.'%')->get(),
         ])->extends('layouts.app')
         ->section('content');
-        
     }
 
     public function updateRoom()
