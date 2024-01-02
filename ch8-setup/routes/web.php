@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\Admin;
+use App\Livewire\Welcome;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', Welcome::class);
+Route::get('/admin-dashboard', Admin::class);
+
