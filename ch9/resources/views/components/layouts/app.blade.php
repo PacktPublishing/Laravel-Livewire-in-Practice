@@ -79,6 +79,15 @@
                         <a href="/" class="nav-item nav-link active">Home</a>
                         <a href="#" class="nav-link">Cars</a>
 
+                        @guest
+                        <a href="/register" class="btn btn-primary nav-link">Register</a>
+
+                        <a href="/login" class="btn btn-success nav-link">Login</a>
+                        @endguest
+
+                        @auth
+                        <a href="#" class="btn btn-danger nav-link">Logout</a>
+                        @endauth
                     </div>
                 </div>
             </nav>
