@@ -23,13 +23,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-        User::create([
-            'name' => 'admin',
-            'email' => 'admin@gmail.com',
-            'is_admin' => true,
-            'password' => Hash::make('password')
-
-        ]);
+        
     }
 
     /**
